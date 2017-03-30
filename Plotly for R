@@ -1,8 +1,7 @@
-# WHAT IS PLOTLY?
-
+#WHAT IS PLOTLY?
     #Plotly for R is an interactive, browser-based charting library built on the open source JavaScript graphing library plotly.js. It works entirely locally in your web-browser via the HTML widgets framework.
     
-# EXAMPLES OF GGPLOTLY:
+#EXAMPLES OF GGPLOTLY:
 
 #Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
 library(plotly)
