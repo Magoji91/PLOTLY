@@ -4,7 +4,7 @@
     
 # EXAMPLES OF GGPLOTLY:
 
-Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
+#Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
 library(plotly)
 head(diamonds)
 dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
