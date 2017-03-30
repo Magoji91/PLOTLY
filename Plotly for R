@@ -1,0 +1,39 @@
+# WHAT IS PLOTLY?
+
+    Plotly for R is an interactive, browser-based charting library built on the open source JavaScript graphing library plotly.js. It works entirely locally in your web-browser via the HTML widgets framework.
+    Plotly graphs are interactive: click-and-drag to zoom, shift-drag to pan, click on legend entries to toggle traces.
+    The plotly R package serializes ggplot2 figures into Plotly's universal graph JSON. plotly::ggplotly will crawl the ggplot2 figure, extract and translate all of the attributes of the ggplot2 figure into JSON (the colors, the axes, the chart type, etc), and draw the graph with plotly.js.
+    Plotly::ggplotly returns a plotly object. When you print it in your console, the plotly object will be sent to your plotly account and opened in your web-browser (e.g. https://plot.ly/~RPlotBot/1778). In knitr, the chart is embedded as an iframe. In Shiny, the chart JSON is served to the client and graphed client-side with postMessage or plotly.js.
+Plotly graphs can also be rendered locally with Plotly Offline for R.
+
+
+# EXAMPLES FOR PLOTLY FOR GGPLOT2:
+
+Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
+library(plotly)
+head(diamonds)
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+gg <- qplot(carat, price, data=dsamp, colour=clarity)
+ggplotly(gg)
+
+#Plotly graphs are interactive. Click on the legend entries to toggle traces, click and drag on the canvas to zoom, shift and click to pan.
+library(plotly)
+set.seed(100)
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+gg <- ggplot(data = d, aes(x = carat, y = price)) +
+geom_point(aes(text = paste("Clarity:", clarity)), size = .4) +
+geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut)
+ggplotly(gg)
+
+#Disable the zoom and pan interactions from Plotly graphs. 
+library(plotly)
+set.seed(100)
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+gg <- ggplot(data = d, aes(x = carat, y = price)) +
+  geom_point(aes(text = paste("Clarity:", clarity)), size = 4) +
+  geom_smooth(aes(colour = cut, fill = cut))
+ggplotly(gg) %>% config(displayModeBar = F) %>% layout(xaxis=list(fixedrange=TRUE)) %>% layout(yaxis=list(fixedrange=TRUE))
+
+
+
+
