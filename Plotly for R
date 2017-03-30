@@ -20,7 +20,7 @@ geom_point(aes(text = paste("Clarity:", clarity)), size = .4) +
 geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut)
 ggplotly(gg)
 
-#Disable the zoom and pan interactions from Plotly graphs. 
+#Disable the zoom and interactions from Plotly graphs. 
 library(plotly)
 set.seed(100)
 dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
