@@ -1,13 +1,8 @@
 # WHAT IS PLOTLY?
 
-    Plotly for R is an interactive, browser-based charting library built on the open source JavaScript graphing library plotly.js. It works entirely locally in your web-browser via the HTML widgets framework.
-    Plotly graphs are interactive: click-and-drag to zoom, shift-drag to pan, click on legend entries to toggle traces.
-    The plotly R package serializes ggplot2 figures into Plotly's universal graph JSON. plotly::ggplotly will crawl the ggplot2 figure, extract and translate all of the attributes of the ggplot2 figure into JSON (the colors, the axes, the chart type, etc), and draw the graph with plotly.js.
-    Plotly::ggplotly returns a plotly object. When you print it in your console, the plotly object will be sent to your plotly account and opened in your web-browser (e.g. https://plot.ly/~RPlotBot/1778). In knitr, the chart is embedded as an iframe. In Shiny, the chart JSON is served to the client and graphed client-side with postMessage or plotly.js.
-Plotly graphs can also be rendered locally with Plotly Offline for R.
-
-
-# EXAMPLES FOR PLOTLY FOR GGPLOT2:
+    #Plotly for R is an interactive, browser-based charting library built on the open source JavaScript graphing library plotly.js. It works entirely locally in your web-browser via the HTML widgets framework.
+    
+# EXAMPLES OF GGPLOTLY:
 
 Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
 library(plotly)
