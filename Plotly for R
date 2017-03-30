@@ -7,14 +7,14 @@
 #Plotly for ggplot2 is an interactive, browser-based charting library built on the open source javascript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework.
 library(plotly)
 head(diamonds)
-dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
-gg <- qplot(carat, price, data=dsamp, colour=clarity)
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+gg <- qplot(carat, price, data=d, colour=clarity)
 ggplotly(gg)
 
 #Plotly graphs are interactive. Click on the legend entries to toggle traces, click and drag on the canvas to zoom, shift and click to pan.
 library(plotly)
 set.seed(100)
-dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+d <- diamonds[sample(nrow(diamonds), 1000), ]
 gg <- ggplot(data = d, aes(x = carat, y = price)) +
 geom_point(aes(text = paste("Clarity:", clarity)), size = .4) +
 geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut)
@@ -23,7 +23,7 @@ ggplotly(gg)
 #Disable the zoom and interactions from Plotly graphs. 
 library(plotly)
 set.seed(100)
-dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+d <- diamonds[sample(nrow(diamonds), 1000), ]
 gg <- ggplot(data = d, aes(x = carat, y = price)) +
   geom_point(aes(text = paste("Clarity:", clarity)), size = 4) +
   geom_smooth(aes(colour = cut, fill = cut))
