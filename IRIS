@@ -1,0 +1,14 @@
+library(shiny)
+library(plotly)
+
+head(iris)
+
+# left
+plot_ly(iris, x = ~Sepal.Length, y = ~Sepal.Width , type="scatter", mode = "markers", 
+        marker=list( size=20 , opacity=0.7), color = ~Petal.Length)
+ 
+# right
+plot_ly(iris, x = ~Petal.Length, y = ~Petal.Width , type="scatter", mode = "markers", 
+        marker=list( size=20 , opacity=0.7), color = ~Sepal.Length , 
+        colors=c("blueviolet","lawngreen") )
+ 
